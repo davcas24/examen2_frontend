@@ -1,0 +1,104 @@
+<div ng-controller="HomeController" id = "homecontain">
+    <!--<h1>{{exampleObject.text}}</h1>-->
+    <div class="row">
+      <form id = "registrar">
+      <br>
+      <br>
+      <span class = "white"> Titulo: </span>
+      <input type = "text"  placeholder = "Usuario" ng-model = "trabajo.titulo" id = "texto"/>
+      <br>
+      <br>
+      <br>
+      <br>
+      <span class = "white"> Descripcion: </span>
+      <input type = "text" placeholder = "Password" ng-model = "trabajo.descripcion" id = "texto1"/>
+      <br>
+      <br>
+      <br>
+      <br>
+      <span class = "white"> Cargo: </span>
+      <input type = "text" placeholder = "Nombre" ng-model = "trabajo.cargo" id = "texto3"/>
+      <br>
+      <br>
+      <br>
+      <br>
+      <span class = "white"> Información: </span>
+      <input type = "text"  placeholder = "Correo" ng-model = "trabajo.informacion" id = "texto2"/>
+      <br>
+      <br>
+      <br>
+      <br>
+      <span class = "white"> Salario: </span>
+      <input type = "text"  placeholder = "Correo" ng-model = "trabajo.salario" id = "texto2"/>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button type="button" class="btn btn-primary" ng-click = "register()" id = "butt">Crear</button>
+    </div>
+    <div >
+      <table class="table table-striped" id="table">
+        <tr>
+          <th>
+            ID
+          </th>
+          <th>
+            Titulo
+          </th>
+          <th>
+            Editorial
+          </th>
+          <th>
+            Año
+          </th>
+          <th>
+            Autor
+          </th>
+          <th>
+          </th>
+        </tr>
+        <tr ng-repeat="Book in Books">
+          <td>
+            {{Book.account}}
+          </td>
+          <td>
+            {{Book.titulo}}
+          </td>
+          <td>
+            {{Book.editorial}}
+          </td>
+          <td>
+            {{Book.ano}}
+          </td>
+          <td>
+            {{Book.autor}}
+          </td>
+          <td align="center">
+            <input type="button" class="btn" value="Modificar" ng-show="isAdmin()" >
+            <input type="button" class="btn" value="Eliminar" ng-show="isAdmin()">
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div ng-show="retornarboolcreate()" id = "crearcontainer">
+      <form>
+        <span class = "white">ID:</span><input type="text" name="account" ng-model="Book.account"><br><br>
+        <span class = "white">Titulo:</span><input type="text" name="titulo" ng-model="Book.titulo"><br><br>
+        <span class = "white">Año:</span><input type="text" name="ano" ng-model="Book.ano"><br><br>
+        <span class = "white">Autor:</span><input type="text" name="autor" ng-model="Book.autor"><br><br>
+        <span class = "white">Editorial:</span><input type="text" name="editoral" ng-model="Book.editorial"><br><br>
+        <input type="button" class="btn" value="Agregar" ng-click = "postBooks()">
+      </form>
+    </div>
+
+    <!--<div ng-show="" id = "modificarcontainer">
+      <form>
+        <span class = "white">Titulo:</span><input type="text" name="titulo" ng-model="Book.titulo"><br><br>
+        <span class = "white">Año:</span><input type="text" name="ano" ng-model="Book.ano"><br><br>
+        <span class = "white">Autor:</span><input type="text" name="autor" ng-model="Book.autor"><br><br>
+        <span class = "white">Editorial:</span><input type="text" name="editoral" ng-model="Book.editorial"><br><br>
+        <input type="button" class="btn" value="Modificar">
+      </form>
+    </div>-->
+</div>

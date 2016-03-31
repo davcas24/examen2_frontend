@@ -1,0 +1,31 @@
+<div ng-controller = "registerController">
+<span class = "thickandwhite"> Registrar </span>
+<form id = "registrar">
+<br>
+<br>
+<span class = "white"> Usuario: </span>
+<input type = "text"  placeholder = "Usuario" ng-model = "user.username" id = "texto"/>
+<br>
+<br>
+<br>
+<br>
+<span class = "white"> Password: </span>
+<input type = "text" placeholder = "Password" ng-model = "user.password" id = "texto1"/>
+<br>
+<br>
+<br>
+<br>
+<span class = "white"> Nombre: </span>
+<input type = "text" placeholder = "Nombre" ng-model = "user.nombre" id = "texto3"/>
+<br>
+<br>
+<br>
+<br>
+<span class = "white"> Correo: </span>
+<input type = "text"  placeholder = "Correo" ng-model = "user.correo" id = "texto2"/>
+<br>
+<br>
+<button type="button" class="btn btn-primary" ng-click = "register()" id = "butt">Registrar</button>
+</form>
+
+</div>

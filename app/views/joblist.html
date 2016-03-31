@@ -1,0 +1,47 @@
+<div ng-controller = "joblistController">
+  <span class = "thickandwhite">Lista de Trabajos</span>
+  <div id = "jb_table">
+    <table class="table table-striped" id="table_reg">
+      <tr>
+        <th>
+          Fecha
+        </th>
+        <th>
+          Titulo
+        </th>
+        <th>
+          Descripción
+        </th>
+        <th>
+          Cargo
+        </th>
+        <th>
+          Salario
+        </th>
+        <th>
+          Contacto
+        </th>
+      </tr>
+      <tr ng-repeat="trabajo in joblist_fin">
+        <td>
+          {{trabajo.fecha}}
+        </td>
+        <td>
+          {{trabajo.titulo}}
+        </td>
+        <td>
+          {{trabajo.descripcion}}
+        </td>
+        <td>
+          {{trabajo.cargo}}
+        </td>
+        <td>
+          {{trabajo.salario}}
+        </td>
+        <td>
+          {{trabajo.contacto}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
